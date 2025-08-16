@@ -69,6 +69,23 @@ A backend platform for handling customer complaints by managing tickets. This ac
 - tags: [string]
 - status: string = “not started” | “in progress” | “complete”
 
+## Servers
+### Central Server
+- central_server_id: uuid
+- name: string
+- region: string
+### Other Servers
+- server_id: uuid
+- name: string
+- region: string
+- teams: [team_id]
+
+## Team
+- team_id: uuid
+- name: string
+- type: string
+- region: string
+
 # Tech Stack
 ## Framework
 - Javascript/Typescript (Express.js)
@@ -78,6 +95,7 @@ A backend platform for handling customer complaints by managing tickets. This ac
 - ~~Supabase (SQL)~~
 - ~~Firebase (NoSQL, GCP)~~
 
+# Diagrams
 <img width="664" height="719" alt="Screenshot 2025-08-16 at 12 45 47 AM" src="https://github.com/user-attachments/assets/ddfa6a88-6b13-46bb-863f-165d5fc2d67b" />
 <img width="1250" height="802" alt="Screenshot 2025-08-16 at 12 44 51 AM" src="https://github.com/user-attachments/assets/06ae10d4-bcae-456f-9dac-b3b67b7ac23d" />
 
