@@ -72,8 +72,8 @@ A backend platform for handling customer complaints by managing tickets. This ac
 # Tech Stack
 ## Framework
 - Javascript/Typescript (Express.js)
-- Python (FastAPI)
+- ~~Python (FastAPI)~~
 ## Database
 - MongoDB (NoSQL)
-- Supabase (SQL)
-- Firebase (NoSQL, GCP)
+- ~~Supabase (SQL)~~
+- ~~Firebase (NoSQL, GCP)~~
