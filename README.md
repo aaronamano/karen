@@ -31,60 +31,81 @@ A backend platform for handling customer complaints by managing tickets. This ac
 - [ ] GET /account/{id}/login
 - [ ] PUT /account/{id}/reset-password
 - [ ] DELETE /account/{id}
-### Admin
-- [ ] POST /account/admin
-- [ ] GET /account/admin/{id}/login
-- [ ] PUT /account/admin/{id}/reset-password
-- [ ] DELETE /account/admin/{id}
 
 ## Ticket operations
 ### User
-- [ ] POST /ticket/{central_server_id}
+- [ ] POST /ticket <!-- Defaults to submitting the ticket to the central server id -->
 
 ### Admin
-- [ ] DELETE /ticket/{id}
-- [ ] PUT /ticket/{id}/status
-- [ ] POST /ticket/{id}/notification
+refers to someone working for a company
+- [ ] DELETE /ticket/{id} <!-- Delete a ticket once it is completed -->
+- [ ] PUT /ticket/{id}/status <!-- Change the status of a ticket -->
+- [ ] POST /ticket/{id}/notification <!-- Send a notification of a ticket via email or 3rd party app (will priortize later) -->
 
 ## Ticket management
-- [ ] GET /tickets/{central_server_id}/{ids}
-- [ ] POST /tickets/{central_server_id}/{ids}/distribute/{server_id}
+core feature for distributing tickets
+- [ ] GET /tickets <!-- Getting ids of tickets filtered based on certain tags or properties -->
+- [ ] POST /tickets/{ids}/distribute/{server_id} <!-- Transferring tickets to a different mock server -->
 
 # Database Schema
-## Accounts
-- user_id: uuid
-- name: string
-- username: string
-- password: string
-- admin: boolean
+## `Accounts` collections
+```json
+{
+    _id: ObjectId(),
+    name: string, // e.g. Tim Cheese
+    username: string, // e.g. timcheese67
+    password: string,
+    type: string = "personal" | "work",
+    role: string = "customer" | "employee",
+    company: string // e.g. McDonalds or University of Michigan
 
-## Ticket Creation
-- ticket_id: uuid
-- title: string
-- description: string
-- tags: [string]
+}
+```
 
-## Ticket handling
-- ticket_id: uuid
-- tags: [string]
-- status: string = “not started” | “in progress” | “complete”
+## `Tickets` collections
+```json
+{
+    _id: ObjectId(),
+    title: string,
+    description: string,
+    tags: [string], // keywords to add related to issue
+    created_at: ISODate(), // date the ticket was submitted
+    status: string = “not started” | “in progress” | “complete”,
+    server: ObjectId() // default to the central server id, change servers to assign the ticket there
 
-## Servers
+}
+```
+
+## `Servers` collection
 ### Central Server
-- central_server_id: uuid
-- name: string
-- region: string
+```json
+{
+    _id: ObjectId(),
+    name: string, // e.g. Iowa McDonalds Server
+    region: string, // e.g. us-east-1
+    teams: None // no teams assigned for central server
+}
+```
 ### Other Servers
-- server_id: uuid
-- name: string
-- region: string
-- teams: [team_id]
+```json
+{
+    _id: ObjectId(),
+    name: string, // e.g. Detroit McDonalds server
+    region: string, // e.g. us-east-1
+    teams: [ObjectId()] // get id of each team
+}
+```
 
-## Team
-- team_id: uuid
-- name: string
-- type: string
-- region: string
+## `Teams` collection
+```json
+{
+    _id: ObjectId(),
+    company: string, // e.g. McDonalds
+    category: string, // e.g. Search Team
+    members: [ObjectId()] // get id of accounts from company
+
+}
+```
 
 # Tech Stack
 ## Framework
