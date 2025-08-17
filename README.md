@@ -34,22 +34,28 @@ A backend platform for handling customer complaints by managing tickets. This ac
 
 ## Ticket operations
 ### User
-- [ ] POST /ticket <!-- Defaults to submitting the ticket to the central server id -->
+- [ ] POST /ticket 
+    - Defaults to submitting the ticket to the central server id
 
 ### Admin
 refers to someone working for a company
-- [ ] DELETE /ticket/{id} <!-- Delete a ticket once it is completed -->
-- [ ] PUT /ticket/{id}/status <!-- Change the status of a ticket -->
-- [ ] POST /ticket/{id}/notification <!-- Send a notification of a ticket via email or 3rd party app (will priortize later) -->
+- [ ] DELETE /ticket/{id} 
+    - Delete a ticket once it is completed
+- [ ] PUT /ticket/{id}/status 
+    - Change the status of a ticket
+- [ ] POST /ticket/{id}/notification 
+    - Send a notification of a ticket via email or 3rd party app (will priortize later)
 
 ## Ticket management
 core feature for distributing tickets
-- [ ] GET /tickets <!-- Getting ids of tickets filtered based on certain tags or properties -->
-- [ ] POST /tickets/{ids}/distribute/{server_id} <!-- Transferring tickets to a different mock server -->
+- [ ] GET /tickets 
+    - Getting ids of tickets filtered based on certain tags or properties
+- [ ] POST /tickets/{ids}/distribute/{server_id} 
+    - Transferring tickets to a different mock server
 
 # Database Schema
 ## `Accounts` collections
-```json
+```
 {
     _id: ObjectId(),
     name: string, // e.g. Tim Cheese
@@ -63,7 +69,7 @@ core feature for distributing tickets
 ```
 
 ## `Tickets` collections
-```json
+```
 {
     _id: ObjectId(),
     title: string,
@@ -78,7 +84,7 @@ core feature for distributing tickets
 
 ## `Servers` collection
 ### Central Server
-```json
+```
 {
     _id: ObjectId(),
     name: string, // e.g. Iowa McDonalds Server
@@ -87,7 +93,7 @@ core feature for distributing tickets
 }
 ```
 ### Other Servers
-```json
+```
 {
     _id: ObjectId(),
     name: string, // e.g. Detroit McDonalds server
@@ -97,7 +103,7 @@ core feature for distributing tickets
 ```
 
 ## `Teams` collection
-```json
+```
 {
     _id: ObjectId(),
     company: string, // e.g. McDonalds
