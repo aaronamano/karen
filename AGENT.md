@@ -1,6 +1,5 @@
 # API Routes
 ## Account management
-### User
 - [ ] POST /account
 - [ ] GET /account/{id}/login
 - [ ] PUT /account/{id}/reset-password
@@ -28,22 +27,23 @@ core feature for distributing tickets
     - Transferring tickets to a different mock server
 
 # Database Schema
+Note: we will be sharding eventually
 ## `Accounts` collections
-```
+```typescript
 {
     _id: ObjectId(),
     name: string, // e.g. Tim Cheese
     username: string, // e.g. timcheese67
     password: string, // use bcrypt
     type: "personal" | "work",
-    role: "customer" | "employee", // include "admin" role eventually
+    role: string, // e.g. student, swe, etc.
     company: string // e.g. McDonalds or University of Michigan
 
 }
 ```
 
 ## `Tickets` collections
-```
+```typescript
 {
     _id: ObjectId(),
     title: string,
@@ -51,8 +51,8 @@ core feature for distributing tickets
     tags: [string], // keywords to add related to issue
     created_at: ISODate(), // date the ticket was submitted
     updated_at: ISODate(), // date the ticket was recently updated
-    status: string = “not started” | “in progress” | “complete”,
-    priority: string = "low" | "medium" | "high",
+    status: “not started” | “in progress” | “complete”,
+    priority: "low" | "medium" | "high",
     assigned_to: ObjectId() // assign ticket to team
     server: ObjectId(), // default to the central server id, change servers to assign the ticket there
     history: [ // New field for audit logs
@@ -69,7 +69,7 @@ core feature for distributing tickets
 
 ## `Servers` collection
 ### Central Server
-```
+```typescript
 {
     _id: ObjectId(),
     name: string, // e.g. Iowa McDonalds Server
@@ -79,7 +79,7 @@ core feature for distributing tickets
 }
 ```
 ### Other Servers
-```
+```typescript
 {
     _id: ObjectId(),
     name: string, // e.g. Detroit McDonalds server
@@ -90,7 +90,7 @@ core feature for distributing tickets
 ```
 
 ## `Teams` collection
-```
+```typescript
 {
     _id: ObjectId(),
     company: string, // e.g. McDonalds

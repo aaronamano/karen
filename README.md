@@ -1,6 +1,6 @@
 # Overview
 A backend platform that manages tickets to handle customer complaints. This acts as a virtual data farm of tickets, which are dealt with and distributed to various teams on other virtual "servers" so that they can resolve it.
-- <b>Why: </b> To practice backend development, managing databases, and possibly handling cloud-related stuff.
+- <b>Why: </b> To practice backend development, managing data, and possibly handling cloud-related stuff.
 - <b>Who: </b> For teams and big companies working and maintaining large scale projects or something like that
 - <b>Uniqueness: </b> Implementing AI-based features such as automatically distributing tickets, handling complaints resolved with FAQ, sending notifications to 3rd party services, prioritizing urgency/severity, etc.
 
