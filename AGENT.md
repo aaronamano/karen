@@ -1,13 +1,13 @@
 # API Routes
 ## Account management
-- [ ] POST /account
-- [ ] GET /account/{id}/login
-- [ ] PUT /account/{id}/reset-password
-- [ ] DELETE /account/{id}
+- [x] POST /account
+- [x] GET /account/{id}/login
+- [x] PUT /account/{id}/reset-password
+- [x] DELETE /account/{id}
 
 ## User
 ### Ticket operations
-- [ ] POST /ticket 
+- [x] POST /ticket 
     - Defaults to submitting the ticket to the central server id
     - input title and description
 
