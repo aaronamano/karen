@@ -5,13 +5,18 @@
 - [ ] PUT /account/{id}/reset-password
 - [ ] DELETE /account/{id}
 
-## Ticket operations
-### User
+## User
+### Ticket operations
 - [ ] POST /ticket 
     - Defaults to submitting the ticket to the central server id
+    - input title and description
 
-### Admin
+
+
+## Admin
+### Ticket operations
 refers to someone working for a company
+- [ ] GET ticket
 - [ ] DELETE /ticket/{id} 
     - Delete a ticket once it is completed
 - [ ] PUT /ticket/{id}/status 
@@ -19,12 +24,13 @@ refers to someone working for a company
 - [ ] POST /ticket/{id}/notification 
     - Send a notification of a ticket via email or 3rd party app (will priortize later)
 
-## Ticket management
+## Distribution
 core feature for distributing tickets
 - [ ] GET /tickets 
     - Getting ids of tickets filtered based on certain tags or properties
 - [ ] POST /tickets/{ids}/distribute/{server_id} 
     - Transferring tickets to a different mock server
+    - Assign tickets for each team in a certain server
 
 # Database Schema
 Note: we will be sharding eventually
