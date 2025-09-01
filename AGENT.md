@@ -11,16 +11,15 @@
     - Defaults to submitting the ticket to the central server id
     - input title and description
 
-
-
 ## Admin
 ### Ticket operations
 refers to someone working for a company
-- [ ] GET ticket
-- [ ] DELETE /ticket/{id} 
+- [x] DELETE /ticket/{id} 
     - Delete a ticket once it is completed
-- [ ] PUT /ticket/{id}/status 
+- [x] PUT /ticket/{id}/status 
     - Change the status of a ticket
+- [x] PUT /ticket/{id}/priority
+    - Change the priority of a ticket
 - [ ] POST /ticket/{id}/notification 
     - Send a notification of a ticket via email or 3rd party app (will priortize later)
 
@@ -91,7 +90,7 @@ Note: we will be sharding eventually
     name: string, // e.g. Detroit McDonalds server
     server_type: string, // e.g. regional
     region: string, // e.g. us-east-1
-    teams: [ObjectId()] // get id of each team
+    teams: [] // get id of each team
 }
 ```
 
@@ -101,7 +100,7 @@ Note: we will be sharding eventually
     _id: ObjectId(),
     company: string, // e.g. McDonalds
     category: string, // e.g. search, support, technical, etc.
-    members: [ObjectId()] // get id of accounts from company
+    members: [] // get id of accounts from company
 
 }
 ```

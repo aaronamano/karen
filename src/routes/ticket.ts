@@ -21,6 +21,7 @@ async function connectDb() {
 connectDb();
 
 const ticketsCollection = client.db('karen').collection('tickets');
+const serversCollection = client.db('karen').collection('servers');
 
 // POST /ticket - Create a new ticket
 router.post('/', async (req: Request, res: Response) => {
@@ -29,6 +30,12 @@ router.post('/', async (req: Request, res: Response) => {
 
         if (!title || !description) {
             return res.status(400).json({ message: 'Title and description are required' });
+        }
+
+        const centralServer = await serversCollection.findOne({ server_type: 'central' });
+
+        if (!centralServer) {
+            return res.status(500).json({ message: 'Central server not found' });
         }
 
         const newTicket = {
@@ -40,7 +47,7 @@ router.post('/', async (req: Request, res: Response) => {
             status: 'not started',
             priority: 'low',
             assigned_to: [], // teams aren't assigned to this ticket yet
-            server: ObjectId.createFromHexString("68af89b9c2faebe1efaef993"), // default to central server id
+            server: centralServer._id, // default to central server id
             history: [],
         };
 
@@ -97,6 +104,44 @@ router.put('/:id/status', async (req: Request, res: Response) => {
         res.status(200).json({ message: 'Ticket status updated successfully' });
     } catch (error) {
         res.status(500).json({ message: 'Error updating ticket status', error });
+    }
+});
+
+// PUT /ticket/{id}/priority - Change the priority of a ticket
+router.put('/:id/priority', async (req: Request, res: Response) => {
+    try {
+        const { priority, userId } = req.body;
+
+        if (!priority) {
+            return res.status(400).json({ message: 'Priority is required' });
+        }
+
+        if (!['low', 'medium', 'high'].includes(priority)) {
+            return res.status(400).json({ message: 'Invalid priority level. Must be one of "low", "medium", or "high".' });
+        }
+
+        const historyEntry = {
+            event: 'priority_change',
+            changed_by: ObjectId.createFromHexString(userId),
+            timestamp: new Date(),
+            details: `Priority changed to ${priority}`,
+        };
+
+        const result = await ticketsCollection.updateOne(
+            { _id: new ObjectId(req.params.id) },
+            { 
+                $set: { priority: priority, updated_at: new Date() },
+                $addToSet: { history: historyEntry }
+            }
+        );
+
+        if (result.matchedCount === 0) {
+            return res.status(404).json({ message: 'Ticket not found' });
+        }
+
+        res.status(200).json({ message: 'Ticket priority updated successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error updating ticket priority', error });
     }
 });
 
