@@ -1,0 +1,5 @@
+{
+  "title": "Login page not loading properly",
+  "description": "When users try to access the login page, it shows a blank white screen instead of the login form. This issue started appearing after the recent deployment yesterday evening. Multiple users have reported this problem across different browsers (Chrome, Firefox, Safari).",
+  "tags": ["login", "ui", "bug", "critical", "frontend"]
+}

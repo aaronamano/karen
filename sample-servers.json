@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Central Processing Server",
+    "server_type": "central",
+    "region": "us-east-1",
+    "teams": []
+  },
+  {
+    "name": "Detroit McDonald's Server",
+    "server_type": "regional",
+    "region": "us-east-1",
+    "teams": []
+  },
+  {
+    "name": "Chicago McDonald's Server",
+    "server_type": "regional",
+    "region": "us-central-1",
+    "teams": []
+  },
+  {
+    "name": "Los Angeles McDonald's Server",
+    "server_type": "regional",
+    "region": "us-west-1",
+    "teams": []
+  },
+  {
+    "name": "University of Michigan IT Server",
+    "server_type": "institutional",
+    "region": "us-east-1",
+    "teams": []
+  },
+  {
+    "name": "Amazon Support Server",
+    "server_type": "corporate",
+    "region": "us-west-2",
+    "teams": []
+  },
+  {
+    "name": "Iowa McDonald's Server",
+    "server_type": "central",
+    "region": "us-east-1",
+    "teams": []
+  },
+  {
+    "name": "Seattle Tech Hub Server",
+    "server_type": "regional",
+    "region": "us-west-1",
+    "teams": []
+  }
+]

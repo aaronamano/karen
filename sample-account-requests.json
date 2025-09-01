@@ -1,0 +1,201 @@
+[{
+  "name": "John Smith",
+  "username": "jsmith",
+  "password": "SecurePass123!",
+  "type": "personal",
+  "role": "user",
+  "company": "TechCorp Inc"
+},
+{
+  "name": "Sarah Johnson",
+  "username": "sjohnson",
+  "password": "StrongPass456@",
+  "type": "work",
+  "role": "administrator",
+  "company": "DataFlow Solutions"
+},
+{
+  "name": "Michael Brown",
+  "username": "mbrown",
+  "password": "MyPass789#",
+  "type": "work",
+  "role": "manager",
+  "company": "CloudTech LLC"
+},
+{
+  "name": "Emily Davis",
+  "username": "edavis",
+  "password": "Password101$",
+  "type": "work",
+  "role": "agent",
+  "company": "HelpDesk Pro"
+},
+{
+  "name": "Robert Wilson",
+  "username": "rwilson",
+  "password": "RobPass202%",
+  "type": "personal",
+  "role": "user",
+  "company": "Innovation Labs"
+},
+{
+  "name": "Lisa Anderson",
+  "username": "landerson",
+  "password": "LisaSecure303^",
+  "type": "work",
+  "role": "super_admin",
+  "company": "Global Systems"
+},
+{
+  "name": "David Martinez",
+  "username": "dmartinez",
+  "password": "DavidPass404&",
+  "type": "work",
+  "role": "lead",
+  "company": "StartupVentures"
+},
+{
+  "name": "Jennifer Taylor",
+  "username": "jtaylor",
+  "password": "JenPass505*",
+  "type": "work",
+  "role": "senior_agent",
+  "company": "CustomerCare Plus"
+},
+{
+  "name": "James Garcia",
+  "username": "jgarcia",
+  "password": "JamesSecure606(",
+  "type": "personal",
+  "role": "user",
+  "company": "DevStudio"
+},
+{
+  "name": "Amanda Thompson",
+  "username": "athompson",
+  "password": "AmandaPass707)",
+  "type": "work",
+  "role": "administrator",
+  "company": "TechSolutions Inc"
+},
+{
+  "name": "Christopher Lee",
+  "username": "clee",
+  "password": "ChrisPass808+",
+  "type": "work",
+  "role": "manager",
+  "company": "WebDev Agency"
+},
+{
+  "name": "Jessica White",
+  "username": "jwhite",
+  "password": "JessPass909=",
+  "type": "work",
+  "role": "team_lead",
+  "company": "SupportHub"
+},
+{
+  "name": "Daniel Rodriguez",
+  "username": "drodriguez",
+  "password": "DanPass010[",
+  "type": "personal",
+  "role": "user",
+  "company": "MobileTech"
+},
+{
+  "name": "Ashley Lewis",
+  "username": "alewis",
+  "password": "AshPass111]",
+  "type": "work",
+  "role": "administrator",
+  "company": "DataCorp"
+},
+{
+  "name": "Matthew Walker",
+  "username": "mwalker",
+  "password": "MattPass212{",
+  "type": "work",
+  "role": "senior_user",
+  "company": "CodeFactory"
+},
+{
+  "name": "Stephanie Hall",
+  "username": "shall",
+  "password": "StephPass313}",
+  "type": "work",
+  "role": "agent",
+  "company": "ServiceDesk"
+},
+{
+  "name": "Anthony Allen",
+  "username": "aallen",
+  "password": "TonyPass414|",
+  "type": "personal",
+  "role": "user",
+  "company": "AppDevelopers"
+},
+{
+  "name": "Nicole Young",
+  "username": "nyoung",
+  "password": "NickPass515\\",
+  "type": "work",
+  "role": "system_admin",
+  "company": "NetworkSolutions"
+},
+{
+  "name": "Joshua King",
+  "username": "jking",
+  "password": "JoshPass616:",
+  "type": "work",
+  "role": "manager",
+  "company": "DigitalAgency"
+},
+{
+  "name": "Megan Scott",
+  "username": "mscott",
+  "password": "MegPass717;",
+  "type": "work",
+  "role": "supervisor",
+  "company": "HelpCenter Pro"
+},
+{
+  "name": "Andrew Green",
+  "username": "agreen",
+  "password": "AndyPass818<",
+  "type": "personal",
+  "role": "user",
+  "company": "WebStudio"
+},
+{
+  "name": "Samantha Adams",
+  "username": "sadams",
+  "password": "SamPass919>",
+  "type": "work",
+  "role": "administrator",
+  "company": "TechExperts"
+},
+{
+  "name": "Ryan Baker",
+  "username": "rbaker",
+  "password": "RyanPass020?",
+  "type": "work",
+  "role": "lead",
+  "company": "SoftwareCo"
+},
+{
+  "name": "Rachel Turner",
+  "username": "rturner",
+  "password": "RachPass121/",
+  "type": "work",
+  "role": "agent",
+  "company": "CustomerSupport Inc"
+},
+{
+  "name": "Justin Phillips",
+  "username": "jphillips",
+  "password": "JustPass222~",
+  "type": "personal",
+  "role": "user",
+  "company": "DevTeam Solutions"
+}]
+

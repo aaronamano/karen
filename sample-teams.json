@@ -1,0 +1,117 @@
+[
+  {
+    "company": "McDonalds",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "McDonalds",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "McDonalds",
+    "category": "management",
+    "members": []
+  },
+  {
+    "company": "McDonalds",
+    "category": "quality_assurance",
+    "members": []
+  },
+  {
+    "company": "University of Michigan",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "University of Michigan",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "University of Michigan",
+    "category": "academic_services",
+    "members": []
+  },
+  {
+    "company": "Amazon",
+    "category": "search",
+    "members": []
+  },
+  {
+    "company": "Amazon",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Amazon",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "Microsoft",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "Microsoft",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Google",
+    "category": "search",
+    "members": []
+  },
+  {
+    "company": "Google",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "Walmart",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Walmart",
+    "category": "logistics",
+    "members": []
+  },
+  {
+    "company": "Target",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Target",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "Starbucks",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Starbucks",
+    "category": "quality_assurance",
+    "members": []
+  },
+  {
+    "company": "Acme Corp",
+    "category": "support",
+    "members": []
+  },
+  {
+    "company": "Tech Solutions Inc",
+    "category": "technical",
+    "members": []
+  },
+  {
+    "company": "Search Engine Co",
+    "category": "search",
+    "members": []
+  }
+]
