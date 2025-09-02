@@ -27,9 +27,9 @@ refers to someone working for a company
 core feature for distributing tickets
 - [ ] GET /tickets 
     - Getting ids of tickets filtered based on certain tags or properties
-- [ ] POST /tickets/{ids}/distribute/{server_id} 
-    - Transferring tickets to a different mock server
-    - Assign tickets for each team in a certain server
+- [ ] PUT /tickets/{id}/distribute/{server_id} 
+    - Get list of ticket ids and "transfer" it to a different mock server
+    - basically changing the server id for each ticket
 
 # Database Schema
 Note: we will be sharding eventually
@@ -58,7 +58,7 @@ Note: we will be sharding eventually
     updated_at: ISODate(), // date the ticket was recently updated
     status: “not started” | “in progress” | “complete”,
     priority: "low" | "medium" | "high",
-    assigned_to: ObjectId() // assign ticket to team
+    assigned_to: ObjectId(), // assign ticket to team
     server: ObjectId(), // default to the central server id, change servers to assign the ticket there
     history: [ // New field for audit logs
         {
